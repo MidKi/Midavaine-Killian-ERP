@@ -1,8 +1,6 @@
-from odoo import api, models, _, fields
-from odoo.exceptions import ValidationError
+from odoo import fields, models, Command
 
-
-class SaleOrder(models.Model):
-    _inherit = 'sale.order'
+class SaleOrderLine(models.Model):
+    _inherit = 'sale.order.line'
 
     training_date = fields.Char(string="Training Date")
